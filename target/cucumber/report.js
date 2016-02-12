@@ -39,21 +39,21 @@ formatter.match({
   "location": "StepDefs.getAPI()"
 });
 formatter.result({
-  "duration": 3875781503,
+  "duration": 3721231076,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.checkJson()"
 });
 formatter.result({
-  "duration": 1915275754,
+  "duration": 1867656167,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.checkArticleType()"
 });
 formatter.result({
-  "duration": 285866575,
+  "duration": 242462509,
   "status": "passed"
 });
 formatter.scenario({
@@ -89,21 +89,21 @@ formatter.match({
   "location": "StepDefs.i_make_a_Get_request_to_the_API_with_articleID()"
 });
 formatter.result({
-  "duration": 1185652165,
+  "duration": 262933589,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_returned_JSON_should_have_node_hasXmAsset()"
 });
 formatter.result({
-  "duration": 969610470,
+  "duration": 277843471,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_ID_is_present()"
 });
 formatter.result({
-  "duration": 296715580,
+  "duration": 352353615,
   "status": "passed"
 });
 });
