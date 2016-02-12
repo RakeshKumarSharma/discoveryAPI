@@ -1,0 +1,116 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "return article json by ID",
+        "description": "",
+        "id": "get-article-by-id;return-article-json-by-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3875781503,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I make a GET request to the discovery API with articleID",
+            "match": {
+              "location": "StepDefs.getAPI()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1915275754,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The API Should return the article JSON",
+            "match": {
+              "location": "StepDefs.checkJson()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 285866575,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The articleType should be article",
+            "match": {
+              "location": "StepDefs.checkArticleType()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@wip"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "retrieve the hasXmlAsset",
+        "description": "",
+        "id": "get-article-by-id;retrieve-the-hasxmlasset",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1185652165,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I make a Get request to the API with articleID",
+            "match": {
+              "location": "StepDefs.i_make_a_Get_request_to_the_API_with_articleID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 969610470,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The returned JSON should have node hasXmAsset",
+            "match": {
+              "location": "StepDefs.the_returned_JSON_should_have_node_hasXmAsset()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 296715580,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The ID is present",
+            "match": {
+              "location": "StepDefs.the_ID_is_present()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "get article by id",
+    "description": "",
+    "id": "get-article-by-id",
+    "keyword": "Feature",
+    "uri": "ApiGet.feature"
+  }
+]
