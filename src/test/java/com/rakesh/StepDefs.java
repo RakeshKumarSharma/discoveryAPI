@@ -22,11 +22,11 @@ public class StepDefs {
     private Response response;
 
     public StepDefs(){
-        RestAssured.baseURI = "http://test-hub.nature.com/api/v1/";
+        RestAssured.baseURI = "http://hub-api-qa.dev.cf.private.springer.com/api/v1/";
     }
 
     private Response getResponse() {
-        return given().parameters("client", "maestro", "domain", "all").get("articles/npjnutd2016101test");
+        return given().parameters("client", "maestro", "domain", "all").get("articles/s00125-016-4106-test_n_issues_184");
     }
     private void postResponse(){
 
@@ -39,13 +39,13 @@ public class StepDefs {
                 "    \"volume\": \"1\",\n" +
                 "    \"coverDate\": \"2015-10-01\",\n" +
                 "    \"hasJournal\": {\n" +
-                "      \"id\": \"mtm\",\n" +
+                "      \"id\": \"natrevchem\",\n" +
                 "      \"type\": \"journals\"\n" +
                 "    },\n" +
                 "    \"hasItem\":{\n" +
                 "            \"list\":[\n" +
                 "                  {\n" +
-                "                      \"id\":\"mtm2013501\" ,\n" +
+                "                      \"id\":\"s00125-016-4106-test_n_issues_184\" ,\n" +
                 "                      \"type\":\"articles\" \n" +
                 "                  }    \n" +
                 "            ]\n" +
@@ -70,7 +70,7 @@ public class StepDefs {
 
     @Then("^The API Should return the article JSON$")
     public void checkJson(){
-        getResponse().then().body("article.id", equalTo("npjnutd2016101test"));
+        getResponse().then().body("article.id", equalTo("s00125-016-4106-test_n_issues_184"));
         }
 
     @Then("^The articleType should be article$")
@@ -90,10 +90,10 @@ public class StepDefs {
 
     @Then("^The ID is present$")
     public void the_ID_is_present() {
-        getResponse().then().body("article.hasXmlAsset.id",equalTo("npjnutd2016101test.xml"),
+        getResponse().then().body("article.hasXmlAsset.id",equalTo("s00125-016-4106-test_n_issues_184.xml"),
                              "article.hasXmlAsset.type",equalTo("xml-assets"),
                              "article.hasXmlAsset.mimetype",equalTo("application/xml"),
-                             "article.hasXmlAsset.link",equalTo("http://test-hub.nature.com/assets/v1/xml-assets/npjnutd2016101test.xml"));
+                             "article.hasXmlAsset.link",equalTo("http://hub-api-qa.dev.cf.private.springer.com/assets/v1/xml-assets/s00125-016-4106-test_n_issues_184.xml"));
     }
 
 
@@ -109,7 +109,7 @@ public class StepDefs {
 
     @Then("^response contains the id of the created issue$")
     public void response_contains_the_id_of_the_created_issue()  {
-        response.then().body("issue.hasItem.list[0].id", equalTo("mtm2013501"));
+        response.then().body("issue.hasItem.list[0].id", equalTo("s00125-016-4106-test_n_issues_184"));
         System.out.println(response.asString());
     }
 }

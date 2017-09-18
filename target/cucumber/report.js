@@ -39,21 +39,21 @@ formatter.match({
   "location": "StepDefs.getAPI()"
 });
 formatter.result({
-  "duration": 3721231076,
+  "duration": 1049737758,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.checkJson()"
 });
 formatter.result({
-  "duration": 1867656167,
+  "duration": 464470189,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.checkArticleType()"
 });
 formatter.result({
-  "duration": 242462509,
+  "duration": 60158954,
   "status": "passed"
 });
 formatter.scenario({
@@ -89,21 +89,71 @@ formatter.match({
   "location": "StepDefs.i_make_a_Get_request_to_the_API_with_articleID()"
 });
 formatter.result({
-  "duration": 262933589,
+  "duration": 55159355,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_returned_JSON_should_have_node_hasXmAsset()"
 });
 formatter.result({
-  "duration": 277843471,
+  "duration": 62923296,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs.the_ID_is_present()"
 });
 formatter.result({
-  "duration": 352353615,
+  "duration": 74983253,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 17,
+  "name": "Create Issue using a POST",
+  "description": "",
+  "id": "get-article-by-id;create-issue-using-a-post",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 18,
+  "name": "I make a POST request with JSON body for creation of an issue",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 19,
+  "name": "The response should return 201",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 20,
+  "name": "response contains the id of the created issue",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefs.i_make_a_POST_request_with_JSON_body_for_creation_of_an_issue()"
+});
+formatter.result({
+  "duration": 696741164,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "201",
+      "offset": 27
+    }
+  ],
+  "location": "StepDefs.the_response_should_return(int)"
+});
+formatter.result({
+  "duration": 9858677,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs.response_contains_the_id_of_the_created_issue()"
+});
+formatter.result({
+  "duration": 18019314,
   "status": "passed"
 });
 });
